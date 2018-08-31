@@ -162,28 +162,7 @@ $(function(){
   /*****************************/
 
 
-  if (!isMobile.any()) {
 
-    var initContentScroll = function () {
-
-      $("#content").niceScroll({
-        cursorcolor: '#000000',
-        zindex: 999999,
-        bouncescroll: true,
-        cursoropacitymax: 0.4,
-        cursorborder: '',
-        cursorborderradius: 7,
-        cursorwidth: '7px',
-        background: 'rgba(0,0,0,.1)',
-        autohidemode: false,
-        railpadding: {top: 0, right: 2, left: 2, bottom: 0}
-      });
-    };
-
-    initContentScroll();
-  } else {
-    $('#content').css({overflow: 'auto'})
-  }
 
   $('#mmenu').on(
     "opened.mm",
@@ -518,15 +497,4 @@ $(function(){
 
   }
 
-})
-
-/******************/
-/* page preloader */
-/******************/
-$(window).load(function() {
-  $("#loader").delay(500).fadeOut(300);
-  $(".mask").delay(800).fadeOut(300, function(){
-    widthLess1024();
-    widthLess768();
-  });
 });

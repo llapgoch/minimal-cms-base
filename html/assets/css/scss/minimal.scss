@@ -31,6 +31,7 @@
 /************* MAIN SETTINGS *************/
 /*****************************************/
 
+
 html,
 body {
   height: 100%;
@@ -39,7 +40,6 @@ body {
 html {
   padding-top: 45px;
   padding-bottom: 0;
-  overflow: hidden;
 
   &.mm-opened {
     #wrap {
@@ -99,18 +99,21 @@ body {
     background-repeat: repeat, no-repeat;
     background-position: left top;
     background-size: auto, cover;
+    background-attachment: fixed;
   }
   &.bg-2 {
     background-image: url(../images/noise.png), url(../images/backgrounds/2.jpg);
     background-repeat: repeat, no-repeat;
     background-position: left top;
     background-size: auto, cover;
+    background-attachment: fixed;
   }
   &.bg-3 {
     background-image: url(../images/noise.png), url(../images/backgrounds/3.jpg);
     background-repeat: repeat, no-repeat;
     background-position: left top;
     background-size: auto, cover;
+    background-attachment: fixed;
   }
   &.bg-4 {
     background-image: url(../images/noise.png), url(../images/backgrounds/4.jpg);
@@ -123,6 +126,7 @@ body {
     background-repeat: repeat, no-repeat;
     background-position: left top;
     background-size: auto, cover;
+    background-attachment: fixed;
   }
   &.bg-6 {
     background-image: url(../images/noise.png), url(../images/backgrounds/6.jpg);
@@ -179,7 +183,7 @@ body {
   .navbar-default {
     border: 0;
 
-    &.navbar-fixed-top, 
+    &.navbar-fixed-top,
     &.navbar-fixed-bottom {
       @include transform(none);
     }
@@ -224,10 +228,10 @@ body {
       width: 100%;
       height: 100%!important;
       z-index: 0;
-      
+
       video {
-        min-height: 100%; 
-        min-width:100%; 
+        min-height: 100%;
+        min-width:100%;
       }
 
       img {
@@ -271,9 +275,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   }
 }
 
-*:before, 
-*:after { 
-  -webkit-transform: translateZ(0); 
+*:before,
+*:after {
+  -webkit-transform: translateZ(0);
 }
 
 menu {
@@ -400,7 +404,7 @@ menu {
 
     .sidebar-collapse {
       display: inline-block;
-      float: right; 
+      float: right;
       line-height: 43px;
 
       a {
@@ -441,7 +445,7 @@ menu {
           height: 30px;
           background-color: $transparent-black-15;
           margin-top: 7px;
-          margin-left: -3px; 
+          margin-left: -3px;
           vertical-align: top;
           position: absolute;
           top: 0;
@@ -656,7 +660,7 @@ menu {
               }
               &:last-child {
                 > a {
-                  margin: 0; 
+                  margin: 0;
                   @include border-radius(0 0 2px 2px);
                   background-color: transparent;
 
@@ -821,13 +825,13 @@ menu {
                   font-size: $font-size-small;
                   font-weight: $font-weight-normal;
                 }
-              }  
+              }
             }
 
             &.arrow {
 
               &:before {
-                border-bottom-color: white; 
+                border-bottom-color: white;
                 left: 134px;
               }
             }
@@ -907,15 +911,9 @@ menu {
 
 .navbar-nav.side-nav {
   width: 250px;
-  position: fixed;
-  margin-top: 45px;
   padding-bottom: 0;
-  top: 0;
-  height: 100%;
   border-radius: 0;
   border: none;
-  overflow-y: auto;
-  z-index: 1;
 
   > *:last-child {
     margin-bottom: 90px;
@@ -951,7 +949,7 @@ menu {
             margin-left: 0;
             input {
               width: 190px;
-            } 
+            }
           }
           &.user {
             margin: 15px 0;
@@ -1068,12 +1066,12 @@ menu {
                     font-size: $font-size-small;
                     font-weight: $font-weight-normal;
                   }
-                }  
+                }
               }
               &.arrow {
 
                 &:before {
-                  border-bottom-color: white; 
+                  border-bottom-color: white;
                   left: 55px;
                 }
               }
@@ -1163,7 +1161,7 @@ menu {
 
               &:after {
                 @include background(linear-gradient(to right, rgba(0,0,0,.2) 0%,rgba(0,0,0,0) 100%));
-                width: 100%;    
+                width: 100%;
               }
             }
 
@@ -1227,7 +1225,7 @@ menu {
 
                 &:after {
                   @include background(linear-gradient(to right, rgba(0,0,0,.2) 0%,rgba(0,0,0,0) 100%));
-                  width: 100%;    
+                  width: 100%;
                 }
               }
               >ul.dropdown-menu {
@@ -1431,7 +1429,7 @@ menu {
 
               i {
                 margin-right: 10px;
-              } 
+              }
 
               b {
                 display: none;
@@ -1706,7 +1704,7 @@ fieldset[disabled] .form-control {
 //checkbox
 div.checkbox {
   margin: 5px 0;
-  
+
   &.check-transparent {
 
     input[type=checkbox] + label:before {
@@ -1897,7 +1895,7 @@ select.form-control + .chosen-container-multi  {
       input {
         padding: 0!important;
         margin: 3px 0;
-        min-height: initial; 
+        min-height: initial;
         color: inherit;
         font-size: 14px;
         -webkit-font-smoothing: antialiased;
@@ -2077,7 +2075,7 @@ select.form-control.input-lg + .chosen-container {
 // input groups
 
 .input-group {
-  
+
   .input-group-btn {
     .btn {
       line-height: 23px;
@@ -2162,28 +2160,28 @@ select.form-control.input-lg + .chosen-container {
   }
 }
 
-.input-group .form-control:last-child, 
-.input-group-addon:last-child, 
-.input-group-btn:last-child>.btn, 
-.input-group-btn:last-child>.btn-group>.btn, 
-.input-group-btn:last-child>.dropdown-toggle, 
-.input-group-btn:first-child>.btn:not(:first-child), 
+.input-group .form-control:last-child,
+.input-group-addon:last-child,
+.input-group-btn:last-child>.btn,
+.input-group-btn:last-child>.btn-group>.btn,
+.input-group-btn:last-child>.dropdown-toggle,
+.input-group-btn:first-child>.btn:not(:first-child),
 .input-group-btn:first-child>.btn-group:not(:first-child)>.btn {
   @include border-left-radius(0);
 }
 
 .input-group .form-control:first-child,
 .input-group-addon:first-child,
-.input-group-btn:first-child>.btn, 
-.input-group-btn:first-child>.btn-group>.btn, 
-.input-group-btn:first-child>.dropdown-toggle, 
-.input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle), 
+.input-group-btn:first-child>.btn,
+.input-group-btn:first-child>.btn-group>.btn,
+.input-group-btn:first-child>.dropdown-toggle,
+.input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child>.btn-group:not(:last-child)>.btn {
   @include border-right-radius(0);
 }
 
 .input-group-addon:not(:first-child):not(:last-child),
-.input-group-btn:not(:first-child):not(:last-child), 
+.input-group-btn:not(:first-child):not(:last-child),
 .input-group .form-control:not(:first-child):not(:last-child) {
   @include border-radius(0);
 }
@@ -2321,7 +2319,7 @@ select.form-control.input-lg + .chosen-container {
   .tile-navbar {
     list-style-type: none;
     padding: 5px 0;
-    margin: -15px; 
+    margin: -15px;
     @include box-shadow(0 3px 0 $transparent-black-05);
     @include border-radius(4px 4px 0 0);
 
@@ -2345,7 +2343,7 @@ select.form-control.input-lg + .chosen-container {
         margin: 0!important;
         padding-left : 20px;
       }
-      
+
       >a {
         color: $transparent-white-7;
 
@@ -2497,7 +2495,7 @@ select.form-control.input-lg + .chosen-container {
       top: 5px;
       font-size: 11px;
       z-index: 99;
-      
+
       a {
         padding: 3px;
         opacity: .4;
@@ -2506,7 +2504,7 @@ select.form-control.input-lg + .chosen-container {
         &:hover {
           opacity: .8;
         }
-      }    
+      }
     }
 
     &.transparent {
@@ -2698,7 +2696,7 @@ select.form-control.input-lg + .chosen-container {
   &.color {
 
     .controls {
-        a {
+      a {
         color: #f2f2f2;
 
         &:hover {
@@ -2813,7 +2811,7 @@ select.form-control.input-lg + .chosen-container {
       &.table-bordered {
         border-collapse: separate;
         border: 0;
-       
+
         >thead,
         >tbody,
         >tfoot {
@@ -2859,38 +2857,38 @@ select.form-control.input-lg + .chosen-container {
           &.active {
             >td,
             >tr {
-               background-color: $transparent-black-1;
+              background-color: $transparent-black-1;
             }
           }
           &.success {
             >td,
             >tr {
-               background-color: transparentize($green, .9);
+              background-color: transparentize($green, .9);
             }
           }
           &.warning {
             >td,
             >tr {
-               background-color: transparentize($orange, .9);
+              background-color: transparentize($orange, .9);
             }
           }
           &.danger {
             >td,
             >tr {
-               background-color: transparentize($red, .9);
+              background-color: transparentize($red, .9);
             }
           }
           &.info {
             >td,
             >tr {
-               background-color: transparentize($cyan, .9);
-            } 
+              background-color: transparentize($cyan, .9);
+            }
           }
         }
       }
     }
     ul.inline.divided > li {
-      border-right-color: $transparent-white-15; 
+      border-right-color: $transparent-white-15;
     }
   }
 
@@ -3031,7 +3029,7 @@ select.form-control.input-lg + .chosen-container {
       &.table-bordered {
         border-collapse: separate;
         border: 0;
-       
+
         >thead,
         >tbody,
         >tfoot {
@@ -3076,20 +3074,20 @@ select.form-control.input-lg + .chosen-container {
           &.active {
             >td,
             >tr {
-               background-color: $transparent-white-2;
+              background-color: $transparent-white-2;
             }
           }
         }
       }
     }
     ul.inline.divided > li {
-      border-right-color: $transparent-white-3; 
+      border-right-color: $transparent-white-3;
     }
   }
 
   &.color {
 
-    .easypiechart .percentage, 
+    .easypiechart .percentage,
     .easypiechart .label {
       color: $transparent-white-8;
     }
@@ -3104,7 +3102,7 @@ select.form-control.input-lg + .chosen-container {
             &.actions {
               a {
                 color: $transparent-white-8;
-              }     
+              }
             }
             &.control {
               a {
@@ -3139,7 +3137,7 @@ select.form-control.input-lg + .chosen-container {
                   &:after {
                     background-color: $transparent-white-6;
                   }
-                } 
+                }
               }
 
               &.sort-asc,
@@ -3196,8 +3194,8 @@ select.form-control.input-lg + .chosen-container {
       >.active>a,
       >.active>span,
       >.active>a:hover,
-      >.active>span:hover, 
-      >.active>a:focus, 
+      >.active>span:hover,
+      >.active>a:focus,
       >.active>span:focus {
         color: $font-color;
         background-color: white;
@@ -3207,8 +3205,8 @@ select.form-control.input-lg + .chosen-container {
       >.disabled>a,
       >.disabled>span,
       >.disabled>a:hover,
-      >.disabled>span:hover, 
-      >.disabled>a:focus, 
+      >.disabled>span:hover,
+      >.disabled>a:focus,
       >.disabled>span:focus {
         color: $transparent-black-4;
         background-color: $transparent-white-2;
@@ -3217,7 +3215,7 @@ select.form-control.input-lg + .chosen-container {
     }
 
     .dataTables_wrapper {
-     
+
       .dataTables_info,
       .dataTables_length,
       .dataTables_filter {
@@ -3300,7 +3298,7 @@ select.form-control.input-lg + .chosen-container {
         list-style-type: none;
         padding: 0;
         margin: 0;
-        
+
         &.users-list,
         &.history-list,
         &.favourite-list {
@@ -3581,7 +3579,7 @@ li.dropdown {
       @include border-radius(0 0 2px 2px);
       @include box-shadow(0 2px 8px rgba(0, 0, 0, 0.176));
 
-      >li { 
+      >li {
         h1 {
           font-family: $font-roboto;
           margin: 0;
@@ -4050,7 +4048,7 @@ li.dropdown {
   display: block;
   width: 200%;
   margin-left: -100%;
-  @include transition(margin 0.2s ease-in 0s);  
+  @include transition(margin 0.2s ease-in 0s);
 }
 
 .onoffswitch-inner:before, .onoffswitch-inner:after {
@@ -4063,7 +4061,7 @@ li.dropdown {
   color: white;
   @include box-sizing(border-box);
   @include border-radius(50px);
-  -webkit-transform: none; 
+  -webkit-transform: none;
 }
 
 .onoffswitch-inner:before {
@@ -4091,7 +4089,7 @@ li.dropdown {
   top: 0;
   bottom: 0;
   right: 15px;
-  @include transition( all 0.2s ease-in 0s);  
+  @include transition( all 0.2s ease-in 0s);
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
@@ -4099,7 +4097,7 @@ li.dropdown {
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-  right: 0px; 
+  right: 0px;
 }
 
 /****************************************/
@@ -4285,7 +4283,7 @@ li.dropdown {
 
 ul.inlineSelect {
   @include border-radius(4px);
-  
+
   &.rowSelect,
   &.inline {
     > li {
@@ -4295,7 +4293,7 @@ ul.inlineSelect {
 
         h5 {
           margin: 0;
-          padding: 10px; 
+          padding: 10px;
         }
       }
 
@@ -4367,7 +4365,7 @@ ul.inlineSelect {
         background-color: $red;
         color: white;
       }
-       >.checkbox {
+      >.checkbox {
         input[type=checkbox]:checked + label {
           background-color: lighten($red, 30%);
         }
@@ -4385,7 +4383,7 @@ ul.inlineSelect {
         background-color: $cyan;
         color: white;
       }
-       >.checkbox {
+      >.checkbox {
         input[type=checkbox]:checked + label {
           background-color: lighten($cyan, 40%);
         }
@@ -4403,7 +4401,7 @@ ul.inlineSelect {
         background-color: $orange;
         color: white;
       }
-       >.checkbox {
+      >.checkbox {
         input[type=checkbox]:checked + label {
           background-color: lighten($orange, 40%);
         }
@@ -4421,7 +4419,7 @@ ul.inlineSelect {
         background-color: $green;
         color: white;
       }
-       >.checkbox {
+      >.checkbox {
         input[type=checkbox]:checked + label {
           background-color: lighten($green, 50%);
         }
@@ -4439,7 +4437,7 @@ ul.inlineSelect {
         background-color: $amethyst;
         color: white;
       }
-       >.checkbox {
+      >.checkbox {
         input[type=checkbox]:checked + label {
           background-color: lighten($amethyst, 20%);
         }
@@ -4457,7 +4455,7 @@ ul.inlineSelect {
         background-color: $greensea;
         color: white;
       }
-       >.checkbox {
+      >.checkbox {
         input[type=checkbox]:checked + label {
           background-color: lighten($greensea, 50%);
         }
@@ -4475,7 +4473,7 @@ ul.inlineSelect {
         background-color: $dutch;
         color: white;
       }
-       >.checkbox {
+      >.checkbox {
         input[type=checkbox]:checked + label {
           background-color: lighten($dutch, 45%);
         }
@@ -4493,7 +4491,7 @@ ul.inlineSelect {
         background-color: $hotpink;
         color: white;
       }
-       >.checkbox {
+      >.checkbox {
         input[type=checkbox]:checked + label {
           background-color: lighten($hotpink, 40%);
         }
@@ -4511,7 +4509,7 @@ ul.inlineSelect {
         background-color: $drank;
         color: white;
       }
-       >.checkbox {
+      >.checkbox {
         input[type=checkbox]:checked + label {
           background-color: lighten($drank, 50%);
         }
@@ -4529,7 +4527,7 @@ ul.inlineSelect {
         background-color: $blue;
         color: white;
       }
-       >.checkbox {
+      >.checkbox {
         input[type=checkbox]:checked + label {
           background-color: lighten($blue, 40%);
         }
@@ -4547,7 +4545,7 @@ ul.inlineSelect {
         background-color: $slategray;
         color: white;
       }
-       >.checkbox {
+      >.checkbox {
         input[type=checkbox]:checked + label {
           background-color: lighten($slategray, 45%);
         }
@@ -4565,7 +4563,7 @@ ul.inlineSelect {
         background-color: $redbrown;
         color: white;
       }
-       >.checkbox {
+      >.checkbox {
         input[type=checkbox]:checked + label {
           background-color: lighten($redbrown, 30%);
         }
@@ -4695,8 +4693,8 @@ ul.inlineSelect {
       @include box-shadow(0 3px 0 $transparent-black-05);
 
       -webkit-transform: rotateY(-180deg);
-         -moz-transform: rotateY(-179deg); /* setting to 180 causes an unnatural-looking half-flip */
-              transform: rotateY(-179deg);
+      -moz-transform: rotateY(-179deg); /* setting to 180 causes an unnatural-looking half-flip */
+      transform: rotateY(-179deg);
 
       @include transform-style(preserve-3d);
 
@@ -4731,7 +4729,7 @@ ul.inlineSelect {
 
       .back {
         p {
-          color: $red;           
+          color: $red;
         }
       }
     }
@@ -4743,7 +4741,7 @@ ul.inlineSelect {
 
       .back {
         p {
-          color: $cyan;           
+          color: $cyan;
         }
       }
     }
@@ -4755,7 +4753,7 @@ ul.inlineSelect {
 
       .back {
         p {
-          color: $green;           
+          color: $green;
         }
       }
     }
@@ -4767,7 +4765,7 @@ ul.inlineSelect {
 
       .back {
         p {
-          color: $orange;           
+          color: $orange;
         }
       }
     }
@@ -4779,7 +4777,7 @@ ul.inlineSelect {
 
       .back {
         p {
-          color: $amethyst;           
+          color: $amethyst;
         }
       }
     }
@@ -4791,7 +4789,7 @@ ul.inlineSelect {
 
       .back {
         p {
-          color: $greensea;           
+          color: $greensea;
         }
       }
     }
@@ -4803,7 +4801,7 @@ ul.inlineSelect {
 
       .back {
         p {
-          color: $drank;           
+          color: $drank;
         }
       }
     }
@@ -4815,7 +4813,7 @@ ul.inlineSelect {
 
       .back {
         p {
-          color: $dutch;           
+          color: $dutch;
         }
       }
     }
@@ -4827,7 +4825,7 @@ ul.inlineSelect {
 
       .back {
         p {
-          color: $hotpink;           
+          color: $hotpink;
         }
       }
     }
@@ -4839,7 +4837,7 @@ ul.inlineSelect {
 
       .back {
         p {
-          color: $redbrown;           
+          color: $redbrown;
         }
       }
     }
@@ -4851,7 +4849,7 @@ ul.inlineSelect {
 
       .back {
         p {
-          color: $slategray;           
+          color: $slategray;
         }
       }
     }
@@ -4863,7 +4861,7 @@ ul.inlineSelect {
 
       .back {
         p {
-          color: $blue;           
+          color: $blue;
         }
       }
     }
@@ -5045,7 +5043,7 @@ blockquote.filled {
 
   small {
     color: $transparent-black-3;
-    font-weight: $font-weight-normal; 
+    font-weight: $font-weight-normal;
   }
 
   &.red {
@@ -5217,35 +5215,35 @@ address.filled {
     background: lighten($dutch, 15%);
 
     strong {
-      background: $dutch; 
+      background: $dutch;
     }
   }
   &.hotpink {
     background: lighten($hotpink, 15%);
 
     strong {
-      background: $hotpink; 
+      background: $hotpink;
     }
   }
   &.blue {
     background: lighten($blue, 15%);
 
     strong {
-      background: $blue; 
+      background: $blue;
     }
   }
   &.slategray {
     background: lighten($slategray, 15%);
 
     strong {
-      background: $slategray; 
+      background: $slategray;
     }
   }
   &.redbrown {
     background: lighten($redbrown, 15%);
 
     strong {
-      background: $redbrown; 
+      background: $redbrown;
     }
   }
 }
@@ -5411,7 +5409,7 @@ ul {
 
     > li {
       display: inline-block;
-      padding: 5px 10px; 
+      padding: 5px 10px;
       vertical-align: top;
     }
 
@@ -5420,7 +5418,7 @@ ul {
         border-right: 1px solid #f2f2f2;
 
         &:last-child {
-          border: 0; 
+          border: 0;
         }
       }
     }
@@ -5487,7 +5485,7 @@ ul {
 
 .btn {
   -webkit-transition: all .25s ease-in-out;
-          transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
   @include border-radius(4px);
 
   &.btn-black-transparent {
@@ -5507,7 +5505,7 @@ ul {
   &.active,
   &:active {
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
 
   &.uppercased {
@@ -5737,7 +5735,7 @@ a.submit {
 
   .modal-dialog {
     margin-top: 30px;
-    
+
     &.wide {
       width: 1200px;
     }
@@ -5753,7 +5751,7 @@ a.submit {
 
     .modal-header {
       border: 0;
-      position: relative; 
+      position: relative;
       @include border-radius(4px 4px 0 0);
 
       h3 {
@@ -5804,7 +5802,7 @@ a.submit {
     max-height: 80%;
     overflow: auto;
   }
-  
+
   &.md-cyan {
     .md-content {
       background-color: $cyan;
@@ -6409,38 +6407,38 @@ a.submit {
 /****************************************/
 
 .twitter-typeahead .tt-hint {
-    display: block;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.428571429;
-    border: 1px solid transparent;
-    border-radius:4px;
+  display: block;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  border: 1px solid transparent;
+  border-radius:4px;
 }
 .twitter-typeahead .hint-small {
-    height: 30px;
-    padding: 5px 10px;
-    font-size: 12px;
-    border-radius: 3px;
-    line-height: 1.5;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  line-height: 1.5;
 }
 .twitter-typeahead .hint-large {
-    height: 45px;
-    padding: 10px 16px;
-    font-size: 18px;
-    border-radius: 6px;
-    line-height: 1.33;
+  height: 45px;
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 6px;
+  line-height: 1.33;
 }
 
 .twitter-typeahead {
-     width: 100%;
+  width: 100%;
 }
 .tt-dropdown-menu {
-     width: 100%;
-     color: $font-color;
+  width: 100%;
+  color: $font-color;
 }
 .tt-hint {
-     width: 100%;
+  width: 100%;
 }
 
 /**************************************/
@@ -6451,7 +6449,7 @@ a.submit {
   vertical-align: bottom;
 
   &.pagination-xs {
-    
+
     >li:first-child>a,
     >li:first-child>span {
       @include border-radius(2px 0 0 2px);
@@ -6520,8 +6518,8 @@ a.submit {
   >.active>a,
   >.active>span,
   >.active>a:hover,
-  >.active>span:hover, 
-  >.active>a:focus, 
+  >.active>span:hover,
+  >.active>a:focus,
   >.active>span:focus {
     color: $font-color;
     border: 1px solid $transparent-black-3;
@@ -6530,8 +6528,8 @@ a.submit {
   >.disabled>a,
   >.disabled>span,
   >.disabled>a:hover,
-  >.disabled>span:hover, 
-  >.disabled>a:focus, 
+  >.disabled>span:hover,
+  >.disabled>a:focus,
   >.disabled>span:focus {
     color: $transparent-black-2;
     border: 1px solid $transparent-black-05;
@@ -6592,7 +6590,7 @@ a.submit {
   }
 
   &.pager-custom {
-    
+
     > li {
 
       &:first-child {
@@ -6642,8 +6640,8 @@ a.submit {
     >.disabled>a,
     >.disabled>span,
     >.disabled>a:hover,
-    >.disabled>span:hover, 
-    >.disabled>a:focus, 
+    >.disabled>span:hover,
+    >.disabled>a:focus,
     >.disabled>span:focus {
       color: $transparent-black-4;
       background-color: $transparent-white-2;
@@ -6654,7 +6652,7 @@ a.submit {
   &.pager-full {
     margin: 0;
 
-     > li {
+    > li {
       >a {
         @include border-radius(0);
         border: 0;
@@ -6712,9 +6710,9 @@ a.submit {
 
   &.tabdrop {
     li.tabdrop {
-      a {  
+      a {
         position: relative;
-        
+
         i {
           font-size: 14px;
         }
@@ -6743,16 +6741,16 @@ a.submit {
     }
   }
 
-  >li.active>a, 
-  >li.active>a:hover, 
+  >li.active>a,
+  >li.active>a:hover,
   >li.active>a:focus {
     color: $font-color;
     background-color: white;
     border: 1px solid transparent;
   }
 
-  >li.success>a, 
-  >li.success>a:hover, 
+  >li.success>a,
+  >li.success>a:hover,
   >li.success>a:focus {
     color: $green;
     border: 1px solid transparent;
@@ -6774,8 +6772,8 @@ a.submit {
     }
   }
 
-  >li.disabled>a, 
-  >li.disabled>a:hover, 
+  >li.disabled>a,
+  >li.disabled>a:hover,
   >li.disabled>a:focus {
     color: $transparent-white-15;
   }
@@ -6862,8 +6860,8 @@ a.submit {
 }
 
 .nav.nav-pills {
-  >li.active>a, 
-  >li.active>a:hover, 
+  >li.active>a,
+  >li.active>a:hover,
   >li.active>a:focus {
     border: 0;
   }
@@ -6964,7 +6962,7 @@ a.submit {
   @include border-radius(4px);
   border: 0;
   -webkit-box-shadow: none;
-  box-shadow: none; 
+  box-shadow: none;
   color: $font-color;
 
   &.well-transparent-black {
@@ -7112,11 +7110,11 @@ a.submit {
 
   .percentage,
   .label {
-      text-align: center;
-      font-weight: 100;
-      font-size: 14px;
-      margin-bottom: 0.3em;
-      color: #717171;
+    text-align: center;
+    font-weight: 100;
+    font-size: 14px;
+    margin-bottom: 0.3em;
+    color: #717171;
   }
 
   .label {
@@ -7201,7 +7199,7 @@ a.submit {
             color: $green;
           }
         }
-      }     
+      }
     }
     &.control {
       cursor: pointer;
@@ -7469,7 +7467,7 @@ a.submit {
           &.progress-cell {
             width: 230px;
             min-width: 130px;
-            
+
             .progress-info {
               .percent {
                 font-size: $font-size-mini;
@@ -7555,7 +7553,7 @@ a.submit {
     font-size: 14px;
     color: $red;
   }
-  
+
   &.checked {
     &:before {
       content: "\f00c";
@@ -7601,7 +7599,7 @@ a.submit {
   }
 
   .media-body {
-    
+
     .media-heading {
       margin-top: 20px;
       margin-bottom: 0;
@@ -7690,7 +7688,7 @@ a.submit {
 /************* MAPS *************/
 /********************************/
 
-.jvectormap-zoomin, 
+.jvectormap-zoomin,
 .jvectormap-zoomout {
   width: 15px;
   height: 15px;
@@ -7701,17 +7699,17 @@ a.submit {
 }
 
 .gmap {
-  
+
   .pagination {
     margin: 0;
     padding: 10px;
     width: 100%;
     text-align: center;
-    
-    .display { 
-      text-align: center; 
-      height: 40px; 
-      line-height: 40px; 
+
+    .display {
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
       font-size: 20px;
       color: #717171;
       font-weight: 300;
@@ -7721,10 +7719,10 @@ a.submit {
     }
 
     .back-btn,
-    .fwd-btn { 
-      cursor:pointer; 
-      width:40px; 
-      height:40px; 
+    .fwd-btn {
+      cursor:pointer;
+      width:40px;
+      height:40px;
       background-color: white;
       display: inline-block;
 
@@ -7747,7 +7745,7 @@ a.submit {
 
     .fwd-btn {
       border-left: 1px solid #e2e2e2;
-      @include border-radius(0 2px 2px 0); 
+      @include border-radius(0 2px 2px 0);
       &:before {
         content: "\f054";
         padding: 0 12px;
@@ -7767,7 +7765,7 @@ a.submit {
     background-color: white;
     margin: 10px;
     padding: 10px 20px 10px 0;
-    @include border-radius(2px); 
+    @include border-radius(2px);
     @include box-shadow(0px 2px 4px #999);
   }
 }
@@ -7778,7 +7776,7 @@ a.submit {
 
 .panel-group {
   .panel {
-    -moz-background-clip: padding; 
+    -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
 
@@ -7813,7 +7811,7 @@ a.submit {
 
     &.active {
       .panel-heading {
-          &:before {
+        &:before {
           content: "\f0d7";
           padding: 10px 14px 10px 13px;
         }
@@ -7840,7 +7838,7 @@ a.submit {
   list-style: none;
   padding: 10px 0;
   margin: 0;
-    
+
   >.search-result {
     padding: 15px 0;
     border-bottom: 1px solid $transparent-black-05;
@@ -8017,7 +8015,7 @@ a.submit {
 
     .tile-placeholder {
       border: 1px dotted $transparent-black-2;
-      margin-bottom: 20px; 
+      margin-bottom: 20px;
       height: 100px;
     }
   }
